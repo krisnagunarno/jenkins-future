@@ -24,7 +24,8 @@ def call(Map param){
                 }
                 stage('Deliver') {
                     steps {
-                        sh "sh $deliverAgent $param.ip"
+                        //sh "sh $deliverAgent $param.ip"
+                         echo deliverAgent
                     }
                 }
             }
