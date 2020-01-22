@@ -1,4 +1,0 @@
-@Library('library-jenkins') _
-pipelinetest(
-    'ip':'172.20.10.4'
-)
