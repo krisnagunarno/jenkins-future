@@ -3,7 +3,7 @@
 //def deliverAgent = libraryResource 'deliver.sh'
 def call(
         Map param
-        def deliverAgent = libraryResource 'deliver.sh'
+        deliverAgent = libraryResource 'deliver.sh'
         ){
         pipeline {
             agent {
