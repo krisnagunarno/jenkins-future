@@ -1,7 +1,10 @@
 #!/usr/bin/env groovy
 
-def deliverAgent = libraryResource 'deliver.sh'
-def call(Map param){
+//def deliverAgent = libraryResource 'deliver.sh'
+def call(
+        Map param
+        def deliverAgent = libraryResource 'deliver.sh'
+        ){
         pipeline {
             agent {
                 label "node1"
@@ -24,8 +27,8 @@ def call(Map param){
                 }
                 stage('Deliver') {
                     steps {
-                        //sh "sh $deliverAgent $param.ip"
-                         echo deliverAgent
+                        sh "sh $deliverAgent $param.ip"
+                        echo deliverAgent
                     }
                 }
             }
