@@ -27,8 +27,9 @@ def call(
                 }
                 stage('Deliver') {
                     steps {
-                        sh "sh $deliverAgent $param.ip"
-                        echo deliverAgent
+                        withEnv(['IPADD='+param.ip]){
+                                sh(libraryResource('deliver.sh'))
+                        }
                     }
                 }
             }
